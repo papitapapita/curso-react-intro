@@ -1,21 +1,29 @@
-import {ToDoCounter} from './ToDoCounter';
-import {ToDoItem} from './ToDoItem';
-import {ToDoSearch} from './ToDoSearch';
-import {ToDoList} from './ToDoList';
+import { ToDoCounter } from './ToDoCounter';
+import { ToDoItem } from './ToDoItem';
+import { ToDoSearch } from './ToDoSearch';
+import { ToDoList } from './ToDoList';
+import { CreateToDoButton } from './CreateToDoButton';
+import { toDos } from './toDos';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ToDoCounter/>
-      <ToDoSearch/>
+      <ToDoCounter completed={2} total={5} />
+      <ToDoSearch />
       <ToDoList>
-        <ToDoItem/>
+        {toDos.map((toDo, index) => (
+          <ToDoItem
+            key={index}
+            description={toDo.text}
+            completed={toDo.completed}
+          />
+        ))}
       </ToDoList>
+      <CreateToDoButton />
     </div>
   );
 }
-
-
 
 export default App;
