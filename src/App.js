@@ -2,7 +2,7 @@ import { ToDoCounter } from './ToDoCounter';
 import { ToDoItem } from './ToDoItem';
 import { ToDoSearch } from './ToDoSearch';
 import { ToDoList } from './ToDoList';
-import { CreateToDoButton } from './CreateToDoButton';
+import { CreateToDoButton } from './AddToDoButton';
 import { toDos } from './toDos';
 import React from 'react';
 
@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Heading />
+      {/*<Heading />*/}
       <ToDoCounter completed={2} total={5} />
       <ToDoSearch />
       <ToDoList>

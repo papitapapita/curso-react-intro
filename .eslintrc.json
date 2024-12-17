@@ -11,8 +11,7 @@
       "plugin:jest/recommended"
     ],
     "rules": {
-      "no-console": "warn",
-      "prettier/prettier": ["error"]
+      "no-console": "warn"
     },
     "plugins": ["jest", "react"],
     "settings": {
