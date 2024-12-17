@@ -4,12 +4,14 @@ import { ToDoSearch } from './ToDoSearch';
 import { ToDoList } from './ToDoList';
 import { CreateToDoButton } from './CreateToDoButton';
 import { toDos } from './toDos';
+import React from 'react';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Heading />
       <ToDoCounter completed={2} total={5} />
       <ToDoSearch />
       <ToDoList>

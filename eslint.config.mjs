@@ -1,19 +1,12 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import pluginReact from "eslint-plugin-react";
+
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {
-    rules: {
-      'no-unused-vars': 'error',
-      'no-undef': 'error'
-    },
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.jest
-      }
-    }
-  },
-  pluginJs.configs.recommended
+  {files: ["**/*.{js,mjs,cjs,jsx}"]},
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+  pluginReact.configs.flat.recommended,
 ];
