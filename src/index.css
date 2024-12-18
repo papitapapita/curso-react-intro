@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
 :root {
   --yellow: #ffd52d;
   --black: #19161c;
@@ -11,7 +25,6 @@
 }
 
 body {
-  margin: 0;
   padding: 32px 0 0;
   background: var(--black);
   display: flex;
